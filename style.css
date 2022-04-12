@@ -34,9 +34,9 @@ body {
 .light-initial {
   height: 728px;
   width: 600px;
-  border-radius: 0px;
+  border-radius: 5px;
   background: #fbf7ee;
-  padding: 20px 25px 15px;
+  padding: 10px 10px 10px;
 }
 
 .main {
@@ -44,26 +44,25 @@ body {
   height: 420px;
   left: 0px;
   top: 0px;
-  padding: 0 15px 0 15px;
+  padding: 0 15px 25px 15px;
   background: linear-gradient(246.26deg, #585dfe 0%, #fb3796 100%);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   align-items: center;
   justify-content: center;
   display: grid;
+  border-radius: 5px;
 }
 
 .heading {
   width: 100%;
   height: 38px;
-  padding-top: 25px;
-  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 5px;
   font-style: normal;
   font-weight: 1000;
-  font-size: 40px;
-  line-height: 38px;
+  font-size: 50px;
+  line-height: 50px;
   /* identical to box height, or 173% */
   text-align: center;
-  letter-spacing: -0.05em;
   color: #ffffff;
 }
 
@@ -71,8 +70,11 @@ body {
   width: 100%;
   height: 150px;
   top: 200px;
-  margin-top: 100px;
-  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  box-shadow: 0 2px 2px #4e4e4e;
   font-style: normal;
   font-weight: 800;
   font-size: 100px;
@@ -91,7 +93,7 @@ body {
 }
 
 .supporting-txt-1 {
-  padding-top: 12px;
+  padding-top: 30px;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -116,14 +118,69 @@ body {
 
 .main button {
   background: #585dfe;
-  height: 70px;
-  width: 50%;
+  height: 60px;
+  width: 40%;
   outline: none;
   position: relative;
-  margin: 15px auto;
+  margin: 0 auto;
   border: none;
-  font-size: 45px;
+  font-size: 35px;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 50px;
   color: #fbf7ee;
+  box-shadow: 0 5px 5px #06f;
+}
+
+@keyframes gradient {
+  0% {
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 125, 125, 0) 0%,
+      #fff 0%,
+      #fff 100%
+    );
+  }
+  25% {
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 125, 125, 0.3) 24%,
+      #fff 25%,
+      #fff 100%
+    );
+  }
+  50% {
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 125, 125, 0.5) 49%,
+      #fff 50%,
+      #fff 100%
+    );
+  }
+  75% {
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 125, 125, 0.8) 74%,
+      #fff 75%,
+      #fff 100%
+    );
+  }
+  100% {
+    color: #fff;
+    background: radial-gradient(
+      circle at center,
+      #f88 99%,
+      #fff 100%,
+      #fff 100%
+    );
+  }
+}
+button:hover {
+  background: #fff;
+  color: #06f;
+}
+button:active {
+  animation: gradient 120ms;
+  background: #f88;
+  color: #fff;
+  box-shadow: none;
 }
